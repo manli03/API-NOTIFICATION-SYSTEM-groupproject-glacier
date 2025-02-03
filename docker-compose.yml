@@ -1,0 +1,62 @@
+services:
+  api:
+    image: manli03/api-a232:latest
+    container_name: api-glacier
+    ports:
+      - "8080:8080"
+
+  angular:
+    image: manli03/angular-a232:latest
+    container_name: angular-glacier
+    ports:
+      - "4200:4200"
+
+#  Cannot run because no cassandra and kafka server
+#  But can still pull the docker
+#
+#  telegrambot:
+#    image: manli03/telegrambot-a232:latest
+#    container_name: telegrambot-glacier
+#    ports:
+#      - "8082:8082"
+#
+#  spark:
+#    image: manli03/spark-a232:latest
+#    container_name: spark-glacier
+#    ports:
+#      - "8081:8081"
+#
+
+
+#  Build docker image
+#  angular:
+#    build:
+#      context: ./src/main/java/my/uum/angular/netflixShows
+#      dockerfile: ./Dockerfile
+#    container_name: angular-glacier
+#    ports:
+#      - "4200:4200"
+#
+#  api:
+#    build:
+#      context: .
+#      dockerfile: api/Dockerfile
+#    container_name: api-glacier
+#    ports:
+#      - "8080:8080"
+##
+#  telegrambot:
+#    build:
+#      context: .
+#      dockerfile: telegrambot/Dockerfile
+#    container_name: telegrambot-glacier
+#    ports:
+#      - "8082:8082"
+#
+#  spark:
+#    build:
+#      context: .
+#      dockerfile: Spark/Dockerfile
+#    container_name: spark-glacier
+#    ports:
+#      - "8081:8081"

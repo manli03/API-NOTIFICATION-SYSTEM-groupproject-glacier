@@ -1,0 +1,66 @@
+<div class="container">
+  <h1>Add Netflix Show</h1>
+
+  <!-- Loading and Error Messages -->
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="errorMessage && !formVisible" class="error-message">{{ errorMessage }}</div>
+  <div *ngIf="errorMessage && formVisible" class="overlay">
+    <div class="message-box error-message">{{ errorMessage }}</div>
+  </div>
+  <div *ngIf="successMessage" class="overlay">
+    <div class="message-box success-message">{{ successMessage }}</div>
+  </div>
+
+  <!-- Form to Add Show -->
+  <form *ngIf="formVisible" (ngSubmit)="addShow(form)" #form="ngForm">
+    <div class="form-group">
+      <label for="show_id">Show ID:</label>
+      <input type="text" id="show_id" [(ngModel)]="newShow.show_id" name="show_id" required readonly>
+    </div>
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" id="title" [(ngModel)]="newShow.title" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="type">Type:</label>
+      <input type="text" id="type" [(ngModel)]="newShow.type" name="type" required>
+    </div>
+    <div class="form-group">
+      <label for="director">Director:</label>
+      <input type="text" id="director" [(ngModel)]="newShow.director" name="director">
+    </div>
+    <div class="form-group">
+      <label for="cast">Cast:</label>
+      <input type="text" id="cast" [(ngModel)]="newShow.cast" name="cast">
+    </div>
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <input type="text" id="country" [(ngModel)]="newShow.country" name="country">
+    </div>
+    <div class="form-group">
+      <label for="dateAdded">Date Added:</label>
+      <input type="date" id="dateAdded" [(ngModel)]="newShow.date_added" name="dateAdded">
+    </div>
+    <div class="form-group">
+      <label for="releaseYear">Release Year:</label>
+      <input type="number" id="releaseYear" [(ngModel)]="newShow.release_year" name="releaseYear" required>
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating:</label>
+      <input type="text" id="rating" [(ngModel)]="newShow.rating" name="rating">
+    </div>
+    <div class="form-group">
+      <label for="duration">Duration:</label>
+      <input type="text" id="duration" [(ngModel)]="newShow.duration" name="duration">
+    </div>
+    <div class="form-group">
+      <label for="listedIn">Listed In:</label>
+      <input type="text" id="listedIn" [(ngModel)]="newShow.listed_in" name="listedIn">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="newShow.description" name="description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Show</button>
+  </form>
+</div>

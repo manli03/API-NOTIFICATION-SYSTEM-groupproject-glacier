@@ -1,0 +1,68 @@
+<div class="container">
+  <h1>Update Netflix Show</h1>
+
+  <!-- Loading and Error Messages -->
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="topErrorMessage" class="top-error-message">{{ topErrorMessage }}</div>
+  <div *ngIf="errorMessage || successMessage" class="overlay">
+    <div *ngIf="errorMessage" class="message-box error-message">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="message-box success-message">{{ successMessage }}</div>
+  </div>
+
+  <!-- Form to Search and Update Show -->
+  <form (ngSubmit)="searchShowById()">
+    <div class="form-group">
+      <label for="show_id">Show ID:</label>
+      <input type="text" id="show_id" [(ngModel)]="showId" name="show_id" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Search Show</button>
+  </form>
+
+  <form *ngIf="showDetails" (ngSubmit)="updateShowDetails()">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" id="title" [(ngModel)]="showDetails.title" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="type">Type:</label>
+      <input type="text" id="type" [(ngModel)]="showDetails.type" name="type" required>
+    </div>
+    <div class="form-group">
+      <label for="director">Director:</label>
+      <input type="text" id="director" [(ngModel)]="showDetails.director" name="director">
+    </div>
+    <div class="form-group">
+      <label for="cast">Cast:</label>
+      <input type="text" id="cast" [(ngModel)]="showDetails.cast" name="cast">
+    </div>
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <input type="text" id="country" [(ngModel)]="showDetails.country" name="country">
+    </div>
+    <div class="form-group">
+      <label for="dateAdded">Date Added:</label>
+      <input type="date" id="dateAdded" [(ngModel)]="showDetails.date_added" name="dateAdded">
+    </div>
+    <div class="form-group">
+      <label for="releaseYear">Release Year:</label>
+      <input type="text" id="releaseYear" [(ngModel)]="showDetails.release_year" name="releaseYear">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating:</label>
+      <input type="text" id="rating" [(ngModel)]="showDetails.rating" name="rating">
+    </div>
+    <div class="form-group">
+      <label for="duration">Duration:</label>
+      <input type="text" id="duration" [(ngModel)]="showDetails.duration" name="duration">
+    </div>
+    <div class="form-group">
+      <label for="listedIn">Listed In:</label>
+      <input type="text" id="listedIn" [(ngModel)]="showDetails.listed_in" name="listedIn">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="showDetails.description" name="description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Show</button>
+  </form>
+</div>

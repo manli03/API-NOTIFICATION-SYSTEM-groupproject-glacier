@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Netflix Titles Dashboard</h1>
+
+  <!-- Loading and Error Messages -->
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+  <!-- Table to Display Titles -->
+  <table *ngIf="!loading && !errorMessage">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Type</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let title of titles">
+      <td>{{ title.show_id }}</td>
+      <td>{{ title.title }}</td>
+      <td>{{ title.type }}</td>
+      <td>
+        <button class="btn btn-edit" (click)="navigateToUpdate(title.show_id)">Edit</button>
+        <button class="btn btn-delete" (click)="navigateToDelete(title.show_id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
