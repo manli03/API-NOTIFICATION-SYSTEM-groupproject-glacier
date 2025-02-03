@@ -216,7 +216,7 @@ The system architecture consists of the following components:
 8. Configure load balancers and auto-scaling groups.
 
 ## Result/Output (Screenshot of the output)
-![Output 1](src/main/resources/WhatsApp%20Image%202024-07-22%20at%2004.16.30_7997c75b.jpg)  ![Output 2](src/main/resources/WhatsApp%20Image%202024-07-22%20at%2004.16.30_217249f9.jpg)  ![Output 3](src/main/resources/WhatsApp%20Image%202024-07-22%20at%2004.16.30_9b5c65e4.jpg)
+<img src="src/main/resources/WhatsApp Image 2024-07-22 at 04.16.30_217249f9.jpg" width="200" alt="Output Image"> &nbsp;&nbsp; <img src="src/main/resources/WhatsApp Image 2024-07-22 at 04.16.30_7997c75b.jpg" width="200" alt="Output Image"> &nbsp;&nbsp; <img src="src/main/resources/WhatsApp Image 2024-07-22 at 04.16.30_9b5c65e4.jpg" width="200" alt="Output Image">
 
 
 
