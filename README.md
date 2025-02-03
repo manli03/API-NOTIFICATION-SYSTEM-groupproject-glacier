@@ -45,7 +45,7 @@ NETFLIX MOVIE API NOTIFICATION SYSTEM
 
 ## System Architecture (MUST be included in your presentation)
 
-![System Architecture Diagram](https://github.com/STIW3054-A232/groupproject-glacier/assets/165546444/a1c70ff9-0bec-4730-9b7d-b2f63fa1009d)
+![System Architecture Diagram](resources%2Fsystem%20architecture.png)
 
 The system architecture consists of the following components:
 
